@@ -77,7 +77,7 @@ public class TestBase
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
-		driver.navigate().to("http://demo.nopcommerce.com/");
+		driver.get("http://demo.nopcommerce.com/");
 	} 
 
 	@AfterSuite

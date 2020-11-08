@@ -34,7 +34,7 @@ public class UserRegistrationPage extends PageBase
 	@FindBy(css="div.result")
 	public WebElement successMessage ; 
 	
-	@FindBy(css="a.ico-logout")
+	@FindBy(linkText="Log out")
 	public WebElement logoutLink; 
 	
 	@FindBy(linkText="My account")

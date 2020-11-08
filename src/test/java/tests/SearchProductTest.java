@@ -3,15 +3,10 @@ package tests;
 import java.lang.reflect.Method;
 
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import io.qameta.allure.Attachment;
-import io.qameta.allure.Description;
-import io.qameta.allure.Step;
 import pages.ProductDetailsPage;
 import pages.SearchPage;
-import utilities.TestAllureListeners;
 import utilities.extendReporting.ExtentTestManager;
 
 //@Listeners(TestAllureListeners.class)
