@@ -11,19 +11,12 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import utilities.Helper;
-import utilities.TestAllureListeners;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 //@Listeners({TestAllureListeners.class})
 public class TestBase 
@@ -57,7 +50,8 @@ public class TestBase
 	public void startDriver(@Optional("chrome") String browserName) 
 	{
 		if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/chromedriver.exe");
+//			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(chromeOption()); 
 		}
 
@@ -80,6 +74,8 @@ public class TestBase
 		driver.get("http://demo.nopcommerce.com/");
 	} 
 
+
+	
 	@AfterSuite
 	public void stopDriver() 
 	{

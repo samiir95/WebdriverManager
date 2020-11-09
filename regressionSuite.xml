@@ -2,10 +2,10 @@
 <suite name="Regression Suite">
 	<parameter name="browser" value="chrome" />
 
-	<listeners>
-<!-- 		<listener class-name="utilities.TestAllureListeners" /> -->
-		<listener class-name="utilities.extendReporting.TestListener" />
-	</listeners>
+<!-- 	<listeners> -->
+<!--  		<listener class-name="utilities.TestAllureListeners" /> --> 
+<!-- 		<listener class-name="utilities.extendReporting.TestListener" /> -->
+<!-- 	</listeners> -->
 
 	<test name="Regression Test" preserve-order="false">
 		<classes>
